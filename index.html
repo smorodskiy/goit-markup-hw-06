@@ -67,7 +67,7 @@
         <!-- <div class="container"> -->
         <section class="order-section">
           <h2 class="order-title">Эффективные решения<br />для вашего бизнеса</h2>
-          <button class="order-btn" type="button" data-modal-open>
+          <button class="order-btn btn" type="button" data-modal-open>
             Заказать услугу <span></span><span></span><span></span><span></span>
           </button>
         </section>
@@ -480,6 +480,51 @@
         <svg class="icon icon-close" data-modal-close>
           <use xlink:href="./images/icons.svg#icon-close"></use>
         </svg>
+        <form action="#">
+          <div class="form-contacts" role="group" aria-labelledby="form-contacts-title">
+            <p id="form-contacts-title">Оставьте свои данные, мы вам перезвоним</p>
+            <label for="input-name">Имя</label>
+            <input type="text" id="input-name" name="input-name" />
+
+            <label for="input-tel">Телефон</label>
+            <input type="text" id="input-tel" name="input-tel" />
+
+            <label for="input-email">Почта</label>
+            <input type="text" id="input-email" name="input-email" />
+
+            <label for="textarea-comments">Комментарий</label>
+            <textarea
+              name=""
+              id="textarea-comments"
+              cols="30"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+
+
+            <label id="agree-policy-label">
+              <!-- <svg class="icon icon-checked">
+                <use xlink:href="./images/icons.svg#icon-letter"></use>
+              </svg> -->
+ 
+              <input
+                type="checkbox"
+                name="agree-policy"
+                class="agree-policy-input hidden"
+              />
+              <span class="icon-policy">
+                <svg class="icon-check" data-modal-close>
+                  <use xlink:href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+
+              Соглашаюсь с рассылкой и принимаю             
+              <span class="agree-policy-label-txt">Условия договора</span>
+            </label>
+
+            <button class="form-contacts-btn btn" type="submit">Отправить</button>
+          </div>
+        </form>
       </div>
     </div>
 
