@@ -1211,6 +1211,12 @@
   pointer-events: none;
 }
 
+#input-name:invalid,
+#input-tel:invalid,
+#input-email:invalid {
+  border: 2px solid red; 
+}
+
 #textarea-comments {
   width: 100%;
   padding: 12px;
