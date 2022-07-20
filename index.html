@@ -472,53 +472,78 @@
             </ul>
           </div>
         </div>
+        <div class="subscribe-box">
+          <h2 class="subscribe-box-title">Подпишитесь на рассылку</h2>
+          <input class="subscribe-box-input" type="email" name="email" id="" />
+          <button class="subscribe-box-btn btn" type="submit">
+            Подписаться<svg class="subscribe-box-btn-icon">
+              <use xlink:href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </footer>
 
     <div class="modal is-hidden" data-modal>
       <div class="modal-order">
-        <svg class="icon icon-close" data-modal-close>
+        <svg class="icon modal-icon-close" data-modal-close>
           <use xlink:href="./images/icons.svg#icon-close"></use>
         </svg>
         <form action="#">
           <div class="form-contacts" role="group" aria-labelledby="form-contacts-title">
             <p id="form-contacts-title">Оставьте свои данные, мы вам перезвоним</p>
-            <label for="input-name">Имя</label>
-            <input type="text" id="input-name" name="input-name" />
 
-            <label for="input-tel">Телефон</label>
-            <input type="text" id="input-tel" name="input-tel" />
+            <label class="form-contacts-label">
+              <span>Имя</span>
+              <div class="form-input-wrapper">
+                <input type="text" id="input-name" name="input-name" autofocus />
+                <svg class="icon-input">
+                  <use xlink:href="./images/icons.svg#icon-avatar"></use>
+                </svg>
+              </div>
+            </label>
 
-            <label for="input-email">Почта</label>
-            <input type="text" id="input-email" name="input-email" />
+            <label class="form-contacts-label">
+              <span>Телефон</span>
+              <div class="form-input-wrapper">
+                <input type="text" id="input-tel" name="input-tel" />
+                <svg class="icon-input">
+                  <use xlink:href="./images/icons.svg#icon-mobile"></use>
+                </svg>
+              </div>
+            </label>
 
-            <label for="textarea-comments">Комментарий</label>
-            <textarea
-              name=""
-              id="textarea-comments"
-              cols="30"
-              rows="10"
-              placeholder="Введите текст"
-            ></textarea>
+            <label class="form-contacts-label">
+              <span>Почта</span>
+              <div class="form-input-wrapper">
+                <input type="text" id="input-email" name="input-email" />
+                <svg class="icon-input">
+                  <use xlink:href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </label>
 
+            <label class="form-contacts-label">
+              <span>Комментарий</span>
+              <textarea
+                name=""
+                id="textarea-comments"
+                cols="30"
+                rows="10"
+                placeholder="Введите текст"
+              ></textarea>
+            </label>
 
             <label id="agree-policy-label">
-              <!-- <svg class="icon icon-checked">
-                <use xlink:href="./images/icons.svg#icon-letter"></use>
-              </svg> -->
- 
-              <input
-                type="checkbox"
-                name="agree-policy"
-                class="agree-policy-input hidden"
-              />
+              <input type="checkbox" name="agree-policy" class="agree-policy-input hidden" />
+
               <span class="icon-policy">
                 <svg class="icon-check" data-modal-close>
                   <use xlink:href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
 
-              Соглашаюсь с рассылкой и принимаю             
+              Соглашаюсь с рассылкой и принимаю
               <span class="agree-policy-label-txt">Условия договора</span>
             </label>
 

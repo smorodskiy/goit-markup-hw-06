@@ -93,7 +93,7 @@
   border-radius: 4px;
   border: 0;
   background: var(--order-btn-background-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
 
   color: var(--order-btn-text-color);
   cursor: pointer;
@@ -811,6 +811,71 @@
   fill: var(--background-color-page);
 }
 
+/* -------- Subscribe box -------- */
+
+.subscribe-box {
+  margin-left: 93px;
+}
+
+.subscribe-box-title {
+  margin-bottom: 20px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--order-title-text-color);
+}
+
+.subscribe-box-input {
+  /* vertical-align: middle; */
+  box-sizing: border-box;
+
+  padding: 15px 16px 15px 16px;
+
+  width: 358px;
+  height: 50px;
+
+  font-size: 16px;
+  line-height: 1.26;
+  
+  letter-spacing: 0.03em;
+  
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscribe-box-btn {
+  margin-left: 12px;
+
+  transition: box-shadow var(--duration) var(--function);
+}
+
+.subscribe-box-btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-box-btn-icon {
+  position: relative;
+  top: 7px;
+  padding-left: 10px;
+
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  
+}
+
+/* -------- Subscribe box -------- */
+
 /* ----------------------PORTFOLIO------------------------ */
 
 /* Фильтр */
@@ -1015,6 +1080,11 @@
 
 /* ---------- Модальное окно Заказать услугу ------------ */
 
+:root {
+  --policy-icon-h: 15px;
+  --policy-icon-w: 16px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -1045,7 +1115,7 @@
   background-color: var(--background-color-page);
 }
 
-.icon-close {
+.modal-icon-close {
   position: absolute;
   right: 0;
   margin: 8px;
@@ -1059,6 +1129,11 @@
   background: var(--background-color-page);
 
   cursor: pointer;
+  transition: fill var(--duration) var(--function);
+}
+
+.modal-icon-close:hover {
+  fill: var(--accent-color);
 }
 
 .is-hidden {
@@ -1086,24 +1161,59 @@
   color: var(--title-text-color);
 }
 
-.form-contacts > label {
-  margin-top: 10px;
-  margin-bottom: 4px;
-
+.form-contacts-label {
+  /* position: relative; */
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
 
-#input-name,
-#input-tel,
-#input-email {
+.form-input-wrapper {
+  position: relative;
+}
+
+.form-contacts-label > span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.form-contacts-label input {
+  box-sizing: border-box;
+  padding-left: 40px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
+  transition: border var(--duration) var(--function);
+}
+
+.form-contacts-label input:focus,
+.form-contacts-label input:hover {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.form-contacts-label input:hover + .icon-input {
+  fill: var(--accent-color);
+}
+
+.form-contacts-label .icon-input {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  width: 18px;
+  height: 18px;
+
+  transition: fill var(--duration) var(--function);
+
+  pointer-events: none;
 }
 
 #textarea-comments {
+  width: 100%;
   padding: 12px;
   height: 120px;
   resize: none;
@@ -1117,18 +1227,26 @@
   color: #75757580;
 
   box-sizing: border-box;
+
+  outline: none;
+  transition: border var(--duration) var(--function);
 }
 
+#textarea-comments:focus,
+#textarea-comments:hover {
+  border: 1px solid var(--accent-color);
+}
+
+/* Checkbox area*/
 #agree-policy-label {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
-  line-height: 24px;
 
+  gap: 8px;
+  margin-top: 20px;
+
+  font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
@@ -1139,50 +1257,64 @@
   text-decoration: underline;
 }
 
-.form-contacts-btn {
-  margin: 30px auto 0;
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-}
-
 .agree-policy-input + .icon-policy {
+  display: inline-block;
   position: relative;
-  width: 16px;
-  height: 15px;
+  width: var(--policy-icon-w);
+  height: var(--policy-icon-h);
 
-  /* border: 2px solid var(--title-text-color); */
+  border: 2px solid var(--title-text-color);
   border-radius: 2px;
   box-sizing: border-box;
   fill: transparent;
-
 }
 
 .icon-check {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 15px;
-}
-
-.agree-policy-input:checked + .icon-policy {
-  border: none;
+  display: block;
+  top: -2px;
+  left: -2px;
+  width: var(--policy-icon-w);
+  height: var(--policy-icon-h);
 }
 
 .agree-policy-input:checked + .icon-policy > .icon-check {
-  /* border: 2px solid var(--accent-color); */
-  /* border-radius: 2px; */
   fill: var(--accent-color);
+  border: transparent;
 }
 
-.agree-policy-input:focus {
+.agree-policy-input:focus + .icon-policy::before {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: var(--policy-icon-w);
+  height: var(--policy-icon-h);
+  border: 2px solid rgba(255, 99, 71, 0.5);
+  border-radius: 2px;
+  content: "";
 }
-.agree-policy-input:disabled {
+
+.agree-policy-input:disabled + .icon-policy {
+  border: 2px solid gray;
 }
-.agree-policy-input:checked:disabled {
+
+.agree-policy-input:disabled:checked + .icon-policy {
   opacity: 0.5;
+}
+/* Checkbox area*/
+
+.form-contacts-btn {
+  margin: 30px auto 0;
+  background: var(--accent-color);
+
+  border-radius: 4px;
+  border: none;
+
+  transition: box-shadow var(--duration) var(--function);
+}
+
+.form-contacts-btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hidden {
