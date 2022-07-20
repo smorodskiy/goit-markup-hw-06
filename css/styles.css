@@ -832,7 +832,7 @@
 }
 
 .subscribe-box-input {
-  /* vertical-align: middle; */
+  vertical-align: top;
   box-sizing: border-box;
 
   padding: 15px 16px 15px 16px;
