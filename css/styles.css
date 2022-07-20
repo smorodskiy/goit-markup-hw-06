@@ -853,6 +853,10 @@
   border-radius: 4px;
 }
 
+.subscribe-box-input:invalid {
+  border: 2px solid red;
+}
+
 .subscribe-box-btn {
   margin-left: 12px;
 
@@ -1161,14 +1165,10 @@
 }
 
 .form-contacts-label {
-  /* position: relative; */
+  position: relative;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-}
-
-.form-input-wrapper {
-  position: relative;
 }
 
 .form-contacts-label > span {
@@ -1200,8 +1200,9 @@
 
 .form-contacts-label .icon-input {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+  top: 58%;
+  /* transform: translateY(-50%); */
   left: 12px;
   width: 18px;
   height: 18px;
@@ -1214,7 +1215,7 @@
 #input-name:invalid,
 #input-tel:invalid,
 #input-email:invalid {
-  border: 2px solid red; 
+  border: 2px solid red;
 }
 
 #textarea-comments {

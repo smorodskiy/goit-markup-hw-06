@@ -473,13 +473,15 @@
           </div>
         </div>
         <div class="subscribe-box">
-          <h2 class="subscribe-box-title">Подпишитесь на рассылку</h2>
-          <input class="subscribe-box-input" type="email" name="email" id="" />
-          <button class="subscribe-box-btn btn" type="submit">
-            Подписаться<svg class="subscribe-box-btn-icon">
-              <use xlink:href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
+          <form action="#">
+            <h2 class="subscribe-box-title">Подпишитесь на рассылку</h2>
+            <input class="subscribe-box-input" type="email" name="email" placeholder="E-Mail" />
+            <button class="subscribe-box-btn btn" type="submit">
+              Подписаться<svg class="subscribe-box-btn-icon">
+                <use xlink:href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -495,38 +497,32 @@
 
             <label class="form-contacts-label">
               <span>Имя</span>
-              <div class="form-input-wrapper">
-                <input type="text" id="input-name" name="input-name" autofocus />
-                <svg class="icon-input">
-                  <use xlink:href="./images/icons.svg#icon-avatar"></use>
-                </svg>
-              </div>
+              <input type="text" id="input-name" name="input-name" autofocus />
+              <svg class="icon-input">
+                <use xlink:href="./images/icons.svg#icon-avatar"></use>
+              </svg>
             </label>
 
             <label class="form-contacts-label">
               <span>Телефон</span>
-              <div class="form-input-wrapper">
-                <input type="tel" id="input-tel" name="input-tel" pattern="\+[1-9]{1}[0-9]{3,14}"/>
-                <svg class="icon-input">
-                  <use xlink:href="./images/icons.svg#icon-mobile"></use>
-                </svg>
-              </div>
+              <input type="tel" id="input-tel" name="input-tel" pattern="\+[1-9]{1}[0-9]{3,14}" />
+              <svg class="icon-input">
+                <use xlink:href="./images/icons.svg#icon-mobile"></use>
+              </svg>
             </label>
 
             <label class="form-contacts-label">
               <span>Почта</span>
-              <div class="form-input-wrapper">
-                <input type="email" id="input-email" name="input-email"/>
-                <svg class="icon-input">
-                  <use xlink:href="./images/icons.svg#icon-email"></use>
-                </svg>
-              </div>
+              <input type="email" id="input-email" name="input-email" />
+              <svg class="icon-input">
+                <use xlink:href="./images/icons.svg#icon-email"></use>
+              </svg>
             </label>
 
             <label class="form-contacts-label">
               <span>Комментарий</span>
               <textarea
-                name=""
+                name="feedback-comment"
                 id="textarea-comments"
                 cols="30"
                 rows="10"
