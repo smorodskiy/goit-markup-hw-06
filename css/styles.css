@@ -842,9 +842,9 @@
 
   font-size: 16px;
   line-height: 1.26;
-  
+
   letter-spacing: 0.03em;
-  
+
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
 
@@ -871,7 +871,6 @@
   width: 24px;
   height: 24px;
   fill: #fff;
-  
 }
 
 /* -------- Subscribe box -------- */
@@ -1278,9 +1277,12 @@
   height: var(--policy-icon-h);
 }
 
+.agree-policy-input:checked + .icon-policy {
+  border: 2px solid transparent;
+}
+
 .agree-policy-input:checked + .icon-policy > .icon-check {
   fill: var(--accent-color);
-  border: transparent;
 }
 
 .agree-policy-input:focus + .icon-policy::before {
